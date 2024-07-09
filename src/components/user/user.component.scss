@@ -1,0 +1,40 @@
+.wrapper {
+  height: 98vh;
+  .profile {
+    display: flex;
+    width: 100%;
+    height: 98%;
+
+    &--info {
+      .btn {
+        width: 50%;
+        margin-bottom: 5px;
+      }
+
+      width: 50%;
+      border: 1px solid orange;
+
+      .good-element {
+        max-height: 0px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: max-height 500ms;
+
+        &__opened {
+          max-height: 300px;
+          transition: max-height 500ms;
+        }
+        .btn {
+          margin-left: 20px;
+          width: calc(50% - 20px);
+        }
+      }
+    }
+
+    &--goods {
+      width: 70%;
+      outline: 1px solid yellow;
+    }
+  }
+}

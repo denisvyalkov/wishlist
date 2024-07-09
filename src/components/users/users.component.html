@@ -1,0 +1,21 @@
+<div class="users" *ngIf="!selectedUser && users; else errorBlock">
+  <div
+    class="user"
+    *ngFor="let user of users"
+    [routerLink]="['/users', user.id]"
+    (click)="selectUser(user)"
+  >
+    <div
+      class="user-img"
+      [style.background-image]="'url(' + user.picture + ')'"
+    ></div>
+
+    <div class="user-info">
+      <h4>{{ user.fio }}</h4>
+      <div>{{ user.info }}</div>
+      <div>Избранных товаров: {{ user.goods.length }}</div>
+    </div>
+  </div>
+</div>
+
+<ng-template #errorBlock> Ошибочка </ng-template>

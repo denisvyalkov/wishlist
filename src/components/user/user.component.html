@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <header>
+    <button class="btn btn-light" (click)="backToUsers()">Назад</button>
+  </header>
+
+  <main class="profile" *ngIf="user">
+    <div class="profile--info">
+      <div *ngFor="let good of user.goods">
+        <div>
+          <button
+            class="btn btn-light"
+            (click)="
+              good.items.length > 1
+                ? toggleGoodsList(good)
+                : selectGood(good.items[0])
+            "
+          >
+            {{ good.name }}
+            {{ good.items.length > 1 ? "(" + good.items.length + ")" : "" }}
+          </button>
+          <div class="good-element" [class.good-element__opened]="good.opened">
+            <ng-container *ngIf="good.items.length > 1">
+              <div
+                class="btn btn-light"
+                *ngFor="let el of good.items"
+                (click)="selectGood(el)"
+              >
+                {{ el.description }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile--goods">
+      <div *ngIf="!selectedGood">Не выбран товар</div>
+      <div *ngIf="selectGood">
+        <main>
+          <wish-good-description [good]="selectedGood"></wish-good-description>
+        </main>
+      </div>
+    </div>
+  </main>
+</div>

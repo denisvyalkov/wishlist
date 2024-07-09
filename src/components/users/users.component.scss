@@ -1,0 +1,41 @@
+.users {
+  display: flex;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+
+  .user {
+    min-width: 25%;
+
+    @media (min-width: 0px) and (max-width: 767px) {
+      width: 100%;
+    }
+
+    margin: 20px 10px;
+    height: max-content;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 1, 22, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    &-img {
+      width: 90px;
+      height: 90px;
+      margin: 10px auto;
+      background-size: contain;
+      border-radius: 100%;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
+  }
+}
