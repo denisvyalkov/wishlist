@@ -1,7 +1,14 @@
 <main *ngIf="good" class="good">
-  <div class="good-photo form-control">{{ good.photo }}</div>
-  <div class="good-name form-control">{{ good.name }}</div>
-  <div class="good-cost form-control">{{ good.cost }}</div>
-  <div class="good-description form-control">{{ good.description }}</div>
-  <div class="good-link form-control">{{ good.link }}</div>
+  <div
+    class="good-photo"
+    [style.background-image]="'url(' + good.photo + ')'"
+  ></div>
+  <div class="form-control good-name">Название: {{ good.name }}</div>
+  <div class="form-control good-cost">Цена: {{ good.cost }}</div>
+  <div class="form-control good-description">
+    Описание: {{ good.description }}
+  </div>
+  <div class="form-control good-link">
+    Ссылка: <a [href]="good.link" target="_blank"> {{good.link}} </a>
+  </div>
 </main>

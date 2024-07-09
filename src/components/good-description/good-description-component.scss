@@ -1,0 +1,13 @@
+.good {
+  &-photo {
+    width: 550px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  .form-control {
+    margin: 10px;
+  }
+}
