@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Good } from '../../shared/models/models';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'wish-good-description',
@@ -8,4 +9,6 @@ import { Good } from '../../shared/models/models';
 })
 export class WishGoodDescription {
   @Input() good: Good | null = null;
+
+
 }

@@ -1,5 +1,8 @@
 .wrapper {
   height: 98vh;
+  header {
+    margin: 0 0 10px 0;
+  }
   .profile {
     display: flex;
     width: 100%;
@@ -7,12 +10,11 @@
 
     &--info {
       .btn {
-        width: 50%;
+        width: calc(100% - 20px);
         margin-bottom: 5px;
       }
 
-      width: 50%;
-      border: 1px solid orange;
+      width: 30%;
 
       .good-element {
         max-height: 0px;
@@ -26,8 +28,8 @@
           transition: max-height 500ms;
         }
         .btn {
+          width: calc(100% - 40px);
           margin-left: 20px;
-          width: calc(50% - 20px);
         }
       }
     }

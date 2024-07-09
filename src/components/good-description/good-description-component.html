@@ -1,1 +1,7 @@
-<main *ngIf="good">{{good.cost}}</main>
+<main *ngIf="good" class="good">
+  <div class="good-photo form-control">{{ good.photo }}</div>
+  <div class="good-name form-control">{{ good.name }}</div>
+  <div class="good-cost form-control">{{ good.cost }}</div>
+  <div class="good-description form-control">{{ good.description }}</div>
+  <div class="good-link form-control">{{ good.link }}</div>
+</main>
